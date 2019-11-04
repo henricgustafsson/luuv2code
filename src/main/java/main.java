@@ -2,7 +2,7 @@ public class main {
 
     public static void main(String[] args) {
 
-        //TODO: ta reda på hur det funkar med spring jars till intelliJ - VÄGRAR gå tbx till eclipse
+        //TODO: ta reda på hur det funkar med spring jars till IntelliJ - VÄGRAR gå tbx till eclipse
        //luv2code https://lexicon.udemy.com/course-dashboard-redirect/?course_id=1217894
 
         //https://www.jetbrains.com/help/idea/spring-support.html
