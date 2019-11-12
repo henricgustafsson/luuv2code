@@ -3,7 +3,7 @@ public class main {
     public static void main(String[] args) {
 
         //TODO: ta reda på hur det funkar med spring jars till IntelliJ - vill ej gå tbx till eclipse
-       //luv2code https://lexicon.udemy.com/course-dashboard-redirect/?course_id=1217894
+       //https://lexicon.udemy.com/course/spring-hibernate-tutorial/learn/lecture/8881586#overview
 
         //https://www.jetbrains.com/help/idea/spring-support.html
 
