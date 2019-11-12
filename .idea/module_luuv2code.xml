@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_luuv2code" default="compile.module.luuv2code">
+  <dirname property="module.luuv2code.basedir" file="${ant.file.module_luuv2code}"/>
+  
+  <property name="module.jdk.home.luuv2code" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.luuv2code" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.luuv2code" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.luuv2code" value="-encoding UTF-8 -source 5 -target 1.5 ${compiler.args}"/>
+  
+  <property name="luuv2code.output.dir" value="${module.luuv2code.basedir}/../target/classes"/>
+  <property name="luuv2code.testoutput.dir" value="${module.luuv2code.basedir}/../target/test-classes"/>
+  
+  <path id="luuv2code.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="luuv2code.module.production.classpath">
+    <path refid="${module.jdk.classpath.luuv2code}"/>
+  </path>
+  
+  <path id="luuv2code.runtime.production.module.classpath">
+    <pathelement location="${luuv2code.output.dir}"/>
+  </path>
+  
+  <path id="luuv2code.module.classpath">
+    <path refid="${module.jdk.classpath.luuv2code}"/>
+    <pathelement location="${luuv2code.output.dir}"/>
+  </path>
+  
+  <path id="luuv2code.runtime.module.classpath">
+    <pathelement location="${luuv2code.testoutput.dir}"/>
+    <pathelement location="${luuv2code.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.luuv2code">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.luuv2code">
+    <patternset refid="excluded.from.module.luuv2code"/>
+  </patternset>
+  
+  <path id="luuv2code.module.sourcepath">
+    <dirset dir="${module.luuv2code.basedir}/../../luuv2code">
+      <include name="src/main/java"/>
+      <include name="libs"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.luuv2code" depends="compile.module.luuv2code.production,compile.module.luuv2code.tests" description="Compile module luuv2code"/>
+  
+  <target name="compile.module.luuv2code.production" depends="register.custom.compilers" description="Compile module luuv2code; production classes">
+    <mkdir dir="${luuv2code.output.dir}"/>
+    <javac2 destdir="${luuv2code.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.luuv2code}/javac">
+      <compilerarg line="${compiler.args.luuv2code}"/>
+      <bootclasspath refid="luuv2code.module.bootclasspath"/>
+      <classpath refid="luuv2code.module.production.classpath"/>
+      <src refid="luuv2code.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.luuv2code"/>
+    </javac2>
+    
+    <copy todir="${luuv2code.output.dir}">
+      <fileset dir="${module.luuv2code.basedir}/../src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.luuv2code.basedir}/../libs">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.luuv2code.tests" depends="register.custom.compilers,compile.module.luuv2code.production" description="compile module luuv2code; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.luuv2code" description="cleanup module">
+    <delete dir="${luuv2code.output.dir}"/>
+    <delete dir="${luuv2code.testoutput.dir}"/>
+  </target>
+</project>
