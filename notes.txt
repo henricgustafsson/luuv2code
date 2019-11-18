@@ -123,31 +123,7 @@
         *       |           -Java Annotations (modern)                                                     |       *
         *       |           -Java Source Code                                                              |       ,
         *       |                                                                                          |       ¨
-        *       |                                                                                          |       ¨
-        *       |                               ------~~~~~~ * ~~~~~~------                                |
-        *       |                               --~~~     Spring      ~~~--                                |       ' 
-        *       |                               --~~~   Developmemnt  ~~~--                                |
-        *       |                               --~~~     Process     ~~~--                                |       .
-        *       |                               ------~~~~~~ * ~~~~~~------                                |
-        *       |                                                                                          |
-                |                                                                                          |
-        *       |                             1. Configure your Spring beans                               |
-        *       |                             2. Create a Spring Container                                 |
-        *       |                             3.Retreive beans from Container                              |
-       *        |                          -----~~~~~~~~~~~~ * ~~~~~~~~~~~~----                            |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                   --~~~~~~  1. Configure your Spring beans ~~~~~~--                      |
-        *       |                                                                                          |
-        *       |                       --~~~ |  ApplicationContext.xml | --~~~                            |
-        *       |                                                                                          |
-        *       |               <beans..>                                                                  |
-        *       |                   <bean id="myCoach"                                                     |
-        *       |                   class="se.lexicon.henric.luuv2code.BaseballCoach"                      |
-        *       |               </beans>                                                                   |
+        *       |                                                                                          |       
         *       |                                                                                          |
         *       |                                                                                          |
         *       *                              * --~~~~~~~~~ * ~~~~~~~~~-- *                               |
@@ -164,58 +140,113 @@
         *       |                                                                                          |
         *       |                                                                                          |
         *       |                                                                                          |
+        *       |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~            |
+        *       |                     What is a bean ? :  A "Spring Bean" is simply a Java                 |
+        *       |                     ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨  object.When Java objects are created            |
+        *       |                     the Spring Container, then Spring refers to them as                  |
+        *       |                     Spring Beans.                                                        |
+        *       |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           |
+        *       |                                                                                          |
+        *       |                                                                                          |
+        *       |                                                                                          |
+        *       |                               ------~~~~~~ * ~~~~~~------                                |
+        *       |                               --~~~     Spring      ~~~--                                |        
+        *       |                               --~~~   Developmemnt  ~~~--                                |
+        *       |                               --~~~     Process     ~~~--                                |       
+        *       |                               ------~~~~~~ * ~~~~~~------                                |
+        *       |                                                                                          |
+        *       |                                                                                          |     
+        *       |                          ----~~~~~~~~~~~~ * ~~~~~~~~~~~~----                             |
+        *       |                                "Write some code" pt.1                                    |         
+        *       |                          -----~~~~~~~~~~~ * ~~~~~~~~~~~~----                             |
+        *       |                                                                                          |
+        *       |                                                                                          |
+        *       |                          ----~~~~~~~~~~~~ * ~~~~~~~~~~~~----                             |
+        *       |                             1. Configure your Spring beans                               |
+        *       |                             2. Create a Spring Container                                 |
+        *       |                             3.Retreive beans from Container                              |
+        *       |                          -----~~~~~~~~~~~~ * ~~~~~~~~~~~~----                            |
         *       |                                                                                          |
         *       |                                                                                          |
         *       |                                                                                          |
         *       |                                                                                          |
         *       |                                                                                          |
+        *       |                   --~~~~~~  1. Configure your Spring beans ~~~~~~--                      |
+        *       |                                                                                          |
+        *       |                       --~~~ |  ApplicationContext.xml | --~~~                            |
+        *       |                                                                                          |
+        *       |                                <beans..>                                                 |
+        *       |                                       <bean id="myCoach"                                 |
+        *       |                                       class="se.lexicon.henric.luuv2code.TrackCoach">    |
+        *       |                                </beans>                                                  |
+        *       |                                                                                          |
+        *       |                                                                                          |
+        *       |                   --~~~~~~  2. Create a Spring Container  ~~~~~~--                       |
+        *       |                                                                                          |
+        *       |                            2.1 Create a new class "HelloSpringApp"                       |
+        *       |                                                                                          |
+        *       |                            2.2 Load the spring configuration file:                       |
+        *       |                                                                                          |
+        *       |                             --~~~ |  HelloSpringApp.Java | --~~~                         |
+        *       |                                                                                          |
+        *       |                             ClasspathXmlApplicationContext context =                     |
+        *       |                             New ClasspathXmlApplicationContext("applicationContext.xml") | 
+        *       |                                                                                          |
+        *       |                                                                                          |
+        *       |                    --~~~~~~  3.Retrieve the bean  ~~~~~~--                               |
+        *       |                                                                                          |
+        *       |                             3.1 Retreive the bean from the spring container              |
+        *       |                                                                                          |
+        *       |                             --~~~ |  HelloSpringApp.Java | --~~~                         |
+        *       |                                                                                          |
+        *       |                             Coach theCoach = context.getBean("myCoach",Coach.class);     |                                     *       |                                                                                          |                   
+        *       |                            3.2 Call methods on the bean                                  |
+        *       |                                                                                          |
+        *       |                             --~~~ |  HelloSpringApp.Java | --~~~                         |
+        *       |                                                                                          |
+        *       |                             System.out.println(theCoach.getDailyWorkout());              |        
+        *       |                                                                                          |
+        *       |                                                                                          |
+        *       |                            3.2 Close the context                                         |
+        *       |                                                                                          |
+        *       |                             --~~~ |  HelloSpringApp.Java | --~~~                         |
+        *       |                                                                                          |
+        *       |                               context.close();                                           |
         *       |                                                                                          |
         *       |                                                                                          |
         *       |                                                                                          |
+        *       |                             Configuring XML logging messages                             |
+        *       |                          -----~~~~~~~~~~~~ * ~~~~~~~~~~~~----                            |
+        *       |                          Logging messages may not appear due to changes in               |
+        *       |                          Spring 5.1+.  By configuring your app logging messages          |
+        *       |                          can be shown. Go to:                                            |
+        *       |                          http://www.luv2code.com/spring-xml-logs                         |
         *       |                                                                                          |
         *       |                                                                                          |
+        *       |                          ----~~~~~~~~~~~~ * ~~~~~~~~~~~~----                             |
+        *       |                                "Write some code" pt.2                                    |         
+        *       |                          -----~~~~~~~~~~~~ * ~~~~~~~~~~~~----                            |                           
         *       |                                                                                          |
         *       |                                                                                          |
+        *       |                          • Change the bean in the config file                            |
+        *       |                                                                                          |
+        *       |                          --~~~ |  ApplicationContext.xml | --~~~                         |
+        *       |                                                                                          |
+        *       |                                <beans..>                                                 |
+        *       |                                       <bean id="myCoach"                                 |
+        *       |                                       class="se.lexicon.henric.luuv2code.TrackCoach">    |
+        *       |                                </beans>                                                  |                       
         *       |                                                                                          |
         *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
+        *       |                         •    Everything is set up with ClassPathApplicationContext       |
+        *       |                              which refers to ApplicationContext.xml so the app is        |
+        *       |                              configurable and ready to run.                              |                           
         *       |                                                                                          |
         *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |                                                                                               |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
-        *       |                                                                                          |
+        *       |                          ----~~~~~~~~~~~~ * ~~~~~~~~~~~~----                             |
+        *       |                              ✅  App should be configurable                             |         
+        *       |                          -----~~~~~~~~~~~~ * ~~~~~~~~~~~~----                            |
         *-------| ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|--------
-        *                                                                                                          |
-        *                                                                                                          |
-        *                                                                                                          |
-        *                                                                                                          |
-        *                                                                                                          |
-        *                                                                                                          |
-        *                                                                                                          |
-        *                                                                                                          |
-        *                                                                                                          |
-        *                                                                                                          |
-        *                                                                                                          |
-        *                                                                                                          |
-        *                                                                                                          |
         *                                                                                                          |
         *                                                                                                          |
         *                                                                                                          |
