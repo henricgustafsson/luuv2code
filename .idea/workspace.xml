@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6708b024-857a-4243-b94c-a0843b68ee18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/ApplicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/beanScope-LifeCycle-applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/beanScope-applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/BeanScopeDemoApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/BeanScopeLifeCycleDemoApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/CricketCoach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FortuneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HappyFortuneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HelloSpringApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SetterDemoApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/sport.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/myApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BaseBallCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaseBallCoach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Coach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Coach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TrackCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TrackCoach.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,9 +29,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Tag Library Descriptor" />
+        <option value="spring-beans.schema" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Tag Library Descriptor" />
       </list>
     </option>
     <option name="SCHEME" value="Project" />
@@ -37,7 +51,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="XML&#10;JAVA" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -51,11 +65,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\deltagare\Desktop\luuv2code\src\main" />
+      <recent name="C:\Users\deltagare\Desktop\luuv2code\libs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\deltagare\Desktop\luuv2code\src\main\java" />
+      <recent name="C:\Users\deltagare\Desktop\luuv2code\src\main" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\deltagare\Desktop\luuv2code\libs" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -70,9 +92,30 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.myApp">
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main" />
+  <component name="RunManager" selected="Application.BeanScopeLifeCycleDemoApp">
+    <configuration name="BeanScopeDemoApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BeanScopeDemoApp" />
+      <module name="luuv2code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeanScopeLifeCycleDemoApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BeanScopeLifeCycleDemoApp" />
+      <module name="luuv2code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HelloSpringApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HelloSpringApp" />
+      <module name="luuv2code" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SetterDemoApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SetterDemoApp" />
       <module name="luuv2code" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -87,8 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BeanScopeLifeCycleDemoApp" />
+        <item itemvalue="Application.BeanScopeDemoApp" />
+        <item itemvalue="Application.SetterDemoApp" />
+        <item itemvalue="Application.HelloSpringApp" />
         <item itemvalue="Application.myApp" />
-        <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
   </component>
@@ -107,7 +153,7 @@
       <workItem from="1573555030511" duration="12938000" />
       <workItem from="1574237318098" duration="110000" />
       <workItem from="1574237551130" duration="4328000" />
-      <workItem from="1574251196606" duration="1057000" />
+      <workItem from="1574251196606" duration="11033000" />
     </task>
     <servers />
   </component>
