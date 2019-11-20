@@ -6,9 +6,9 @@ public class myApp {
 
     public static void main(String[] args) {
 
+
         //Create the BaseBallCoach object
         Coach theCoach = new TrackCoach();
-
         System.out.println(theCoach.getDailyWorkout());
     }
 }
