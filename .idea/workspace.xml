@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6708b024-857a-4243-b94c-a0843b68ee18" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/ApplicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/beanScope-LifeCycle-applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/beanScope-applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/BeanScopeDemoApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/BeanScopeLifeCycleDemoApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CricketCoach.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FortuneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HappyFortuneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HelloSpringApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SetterDemoApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/sport.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BaseBallCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BaseBallCoach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Coach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Coach.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TrackCoach.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TrackCoach.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,6 +138,7 @@
       <workItem from="1574237318098" duration="110000" />
       <workItem from="1574237551130" duration="4328000" />
       <workItem from="1574251196606" duration="11033000" />
+      <workItem from="1575965198142" duration="904000" />
     </task>
     <servers />
   </component>
