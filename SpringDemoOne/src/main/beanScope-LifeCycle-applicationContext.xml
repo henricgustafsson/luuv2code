@@ -10,7 +10,7 @@
 
     </bean>
 
-
+ <!-- Default scope is singleton, prototype does not throw prototype -->
     <bean id="myCoach"
           class="TrackCoach"
           <!-- scope ="prototype" Destroy method not called if prototype -->
